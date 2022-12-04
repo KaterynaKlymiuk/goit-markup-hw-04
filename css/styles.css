@@ -37,7 +37,7 @@ margin-left: auto;
 margin-right: auto;
 padding-left: 15px;
 padding-right: 15px;
-outline: 2px solid tomato;
+/* outline: 2px solid tomato; */
 }
 
 /* Шапка */
@@ -71,7 +71,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
 
 }
 
@@ -180,7 +180,7 @@ header {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
 }
 
 .hero-btn {
@@ -372,6 +372,11 @@ object-fit: cover;
   padding-left: auto;
   padding-right: auto;
   margin: 0;
+}
+
+.massenger-link {
+  width: 20px;
+  height: 20px;
 }
 
 .massengers li {
@@ -609,8 +614,8 @@ max-width: 1600px;
 
 margin-left: auto;
 margin-right: auto;
-padding-top: 50px;
-padding-bottom:  50px;
+padding-top: 60px;
+padding-bottom:  60px;
 
 background-color: var(--dark-background);
 }
@@ -631,8 +636,10 @@ background-color: var(--dark-background);
 }
 
 .footer-address > ul {
-  margin-top: 20px;
+  margin: 0;
+  padding-top: 20px;
   padding-left: 0;
+  padding-bottom: 0;
 }
 
 .footer-address [href*="https"] {
@@ -668,6 +675,48 @@ background-color: var(--dark-background);
   display: flex;
 }
 
-/* фот соцсетей футера
+.invitation {
+  margin-left: 70px;
+  height: 100%;
+}
 
-background: rgba(255, 255, 255, 0.1); */
+.invitation h3 {
+  margin-top: 15px;
+  margin-bottom: 20px;
+
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.invitation ul {
+  padding-left: 0;
+}
+
+.invitation .massenger-link {
+  color: #fff;
+}
+
+.invitation .massengers svg {
+  height: 20px;
+  width: 20px;
+  fill: currentColor;
+}
+
+.invitation .massengers li {
+  height: 44px;
+  width: 44px;
+  margin-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  border-radius: 50%;
+}
+
+.invitation .massengers > li:hover {
+  background-color: var(--interactive-color);
+}
