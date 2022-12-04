@@ -33,13 +33,20 @@ a {
 
 .container {
 width: 1200px;
-margin: 0 215px;
+margin-left: auto;
+margin-right: auto;
+padding-left: 15px;
+padding-right: 15px;
 outline: 2px solid tomato;
 }
 
 /* Шапка */
 
 header {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
   border-bottom: 1px solid #ECECEC;
 }
 
@@ -60,13 +67,11 @@ header {
 }
 
 .header-section {
+  min-height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 215px;
   outline: 2px solid tomato;
-
-  min-height: 80px;
 
 }
 
@@ -115,6 +120,8 @@ header {
 .header-address a {
   color: var(--content-color);
 
+  display: flex;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -122,17 +129,20 @@ header {
   letter-spacing: 0.02em;
 }
 
-.mail::before {
-content: '';
-display: inline-block;
-margin-right: 10px;
-width: 20px;
-height: 10px;
-background-color: red;
-align-items: center;
+.icon-mail svg {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
 
-/* fill: currentColor; */
-border-radius: 50%;
+  fill: currentColor;
+}
+
+.icon-tel svg {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  
+  fill: currentColor;
 }
 
 /* Герой */
@@ -174,8 +184,6 @@ border-radius: 50%;
 }
 
 .hero-btn {
-  /* margin-left: auto;
-  margin-right: auto; */
   display: inline-block;
   margin-top: 30px;
 
@@ -183,6 +191,7 @@ border-radius: 50%;
   background-color: var(--interactive-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: 0px;
 
   font-weight: 700;
   font-size: 16px;
@@ -210,6 +219,30 @@ border-radius: 50%;
 
 .features {
   margin-top: 94px;
+}
+
+.icons-features::before{
+  content: '';
+  display: block;
+  height: 120px;
+
+  margin-bottom: 30px;
+}
+
+.attantion::before {
+background-image: url(../imges/Group\ 1.svg);
+}
+
+.punctuality::before {
+  background-image: url(../imges/Group\ 2.svg);
+}
+
+.planning::before {
+  background-image: url(../imges/Group\ 3.svg);
+}
+
+.technologies::before {
+  background-image: url(../imges/Group\ 4.svg);
 }
 
 .features-list {
@@ -241,6 +274,9 @@ margin-right: 30px;
   line-height: 1.71;
 
   letter-spacing: 0.03em;
+
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
 /* Чим ми займаємось */
@@ -271,31 +307,114 @@ margin-right: 30px;
 .working-list li:not(:last-child) {
   margin-right: 30px;
 }
+
+.working-thumb {
+  min-width: 370px;
+  height: 294px;
+
+}
+
+.working-thumb > img {
+display: block;
+width: 100%;
+height: 100%;
+
+object-position: center;
+object-fit: cover;
+}
+
 /* Наша команда */
 
 .team {
   width: 1600px;
   margin-top: 94px;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 94px;
   background-color: var(--light-background);
+}
+
+.team-thumb {
+    display: block;
+    min-width: 270px;
+    height: 260px;
+}
+
+.team-thumb > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
 }
 
 .team-list {
   display: flex;
 
-  padding-left: 0;
   margin-top: 50px;
   justify-content: space-between;
 }
 
-.team-list li:not(:last-child) {
+.team-list > li:not(:last-child) {
   margin-right: 30px;
 }
+
+.team-list > li {
+  display: block;
+  height: 428px;
+  background-color: var(--light-background);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.massengers {
+  display: flex;
+  padding-left: auto;
+  padding-right: auto;
+  margin: 0;
+}
+
+.massengers li {
+  list-style-type: none;
+  display: flex;
+  height: 44px;
+  width: 44px;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.massenger-link {
+color: #afb1b8;
+}
+
+.massengers li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.massengers svg {
+height: 20px;
+width: 20px;
+fill: currentColor;
+}
+
+.massengers li:hover {
+  height: 44px;
+  width: 44px;
+  background-color: var(--interactive-color);
+  
+  border-radius: 50%;
+}
+
+.massengers svg:hover {
+fill: #fff;
+}
+
 
 .team h2 {
   color: var(--heading-color);
 
- padding-top: 94px;
+  padding-top: 94px;
   margin: 0;
 
   font-size: 36px;
@@ -307,6 +426,9 @@ margin-right: 30px;
 
 .team h3 {
   color: var(--heading-color);
+
+  margin-top: 30px;
+  margin-bottom: 10px;
 
   font-weight: 500;
   font-size: 16px;
@@ -320,17 +442,79 @@ margin-right: 30px;
   font-size: 16px;
   line-height: 1.188;
 
+  margin-top: 0;
+  margin-bottom: 16px;
+
   text-align: center;
   letter-spacing: 0.03em;
 }
+
+/* Постійні клієнти */
+
+.clients h2 {
+  color: var(--heading-color);
+
+  padding-top: 94px;
+  margin: 0;
+
+  font-size: 36px;
+  line-height: 1.17;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.clients-list {
+  display: flex;
+  padding: 0;
+  padding-bottom: 94px;
+  margin-bottom: 0;
+  margin-top: 50px;
+}
+
+.clients-list li {
+  list-style-type: none;
+  display: flex;
+
+  height: 92px;
+  width: 170px;
+
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+}
+
+.clients-list a {
+  color: #afb1b8;
+}
+
+.clients-list li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-list svg {
+  height: 60px;
+  width: 106px;
+
+  fill: currentColor;
+}
+
+.clients-list svg:hover {
+  fill: var(--interactive-color);
+}
+
+.clients-list li:hover {
+  border: 1px solid var(--interactive-color);
+}
+
 
 /* Портфоліо */
 .portfolio-section {
   margin-top: 72px;
   margin-bottom: 116px;
   padding: 0;
-
-  outline: 2px solid tomato;
 }
 
 .portfolio-list {
@@ -345,7 +529,12 @@ margin-right: 30px;
   padding: 0;
   margin-right: 30px;
   margin-bottom: 30px;
-  outline: 2px solid tomato;
+  border: 1px solid #EEEEEE;
+}
+
+.portfolio-list li:hover {
+  border: 1px solid #EEEEEE;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-list li:nth-child(3n) {
@@ -418,10 +607,12 @@ margin-right: 8px;
 footer {
 max-width: 1600px;
 
+margin-left: auto;
+margin-right: auto;
 padding-top: 50px;
 padding-bottom:  50px;
 
-  background-color: var(--dark-background);
+background-color: var(--dark-background);
 }
 
 .logo-footer {
@@ -472,3 +663,11 @@ padding-bottom:  50px;
 .footer-address [href*="telto"]:focus {
   color: var(--interactive-color);
 }
+
+.footer-section {
+  display: flex;
+}
+
+/* фот соцсетей футера
+
+background: rgba(255, 255, 255, 0.1); */

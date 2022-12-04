@@ -19,7 +19,7 @@
   <body>
     <!-- Шапка сайту -->
     <header>
-      <div class="header-section">
+      <div class="header-section container">
         <nav class="nav-menu">
           <a href="./index.html" class="logo-header"><span>Web</span>Studio</a>
           <ul class="nav-list">
@@ -29,8 +29,16 @@
           </ul>
         </nav>
         <ul class="header-address">
-          <li><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-          <li><a href="telto:+380961111111">+38 096 111 11 11</a></li>
+          <li><a href="mailto:info@devstudio.com" class="mail">
+              <div class="icon-mail"><svg>
+                  <use href="./imges/sprite.svg#envelope"></use>
+                </svg></div>info@devstudio.com
+            </a></li>
+          <li><a href="telto:+380961111111" class="tel">
+              <div class="icon-tel"><svg>
+                  <use href="./imges/sprite.svg#smartphone"></use>
+                </svg></div>+38 096 111 11 11
+            </a></li>
         </ul>
       </div>
     </header>
